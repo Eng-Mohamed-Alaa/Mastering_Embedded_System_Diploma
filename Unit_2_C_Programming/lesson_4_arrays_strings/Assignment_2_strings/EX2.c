@@ -8,8 +8,8 @@ void main()
 	printf("Enter a string: ");
 	fflush(stdin); fflush(stdout);
 	gets(text);
-	while (text[i-1] != 0)
+	while (text[i] != 0)
 		++i;
-	printf("\nLength of string: %d", i-1);
+	printf("\nLength of string: %d", i);
 }
 
