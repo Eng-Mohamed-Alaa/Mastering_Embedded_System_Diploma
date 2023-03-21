@@ -37,7 +37,6 @@ int main(void)
 	volatile R_ODR_t *R_ODR = (R_ODR_t *) (GPIOA_Base+0x0c);
 	while(1)
 		{
-			GPIOA_ODR |= 1<<13;
 			R_ODR -> pin.p_13 = 1;
 			int i;
 			for(i=0; i < 5000; ++i){}
