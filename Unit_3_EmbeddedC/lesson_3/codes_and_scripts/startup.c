@@ -38,7 +38,7 @@ void Reset_Handler(void)
 		*(p_dst++) = *(p_src++);
 	}
 	
-	//initializing .bss section from in sram by 0
+	//initializing .bss section in sram by 0
 	uint32_t bss_size = (uint32_t)&_E_bss - (uint32_t)&_S_bss;	
 	p_dst = (unsigned char*) &_S_bss;
 
