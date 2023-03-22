@@ -12,9 +12,6 @@ PROJECT_NAME=learn_in_depth_cortex_M3
 
 all: $(PROJECT_NAME).bin
 
-%.o: %.s
-	$(CC)as.exe $(CFLAGS) $< -o $@
-
 %.o: %.c
 	$(CC)gcc.exe -c  $(CFLAGS) $(INCS) $< -o $@
 
