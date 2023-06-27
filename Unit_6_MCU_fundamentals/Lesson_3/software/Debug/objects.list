@@ -1,0 +1,4 @@
+"Src/lab4.o"
+"Src/syscalls.o"
+"Src/sysmem.o"
+"Startup/startup_stm32f103c6tx.o"
