@@ -1,0 +1,362 @@
+
+AVR_Drivers.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000204  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  00000278  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000004  00800060  00800060  00000278  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000278  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000002a8  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000e0  00000000  00000000  000002e4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000b81  00000000  00000000  000003c4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000803  00000000  00000000  00000f45  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000077d  00000000  00000000  00001748  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000268  00000000  00000000  00001ec8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000581  00000000  00000000  00002130  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000657  00000000  00000000  000026b1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000b0  00000000  00000000  00002d08  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   8:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  10:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  14:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  18:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  1c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  20:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  24:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  28:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  2c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  30:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  34:	0c 94 d9 00 	jmp	0x1b2	; 0x1b2 <__vector_13>
+  38:	0c 94 b2 00 	jmp	0x164	; 0x164 <__vector_14>
+  3c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  40:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  44:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  48:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  4c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  50:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_copy_data>:
+  60:	10 e0       	ldi	r17, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	e4 e0       	ldi	r30, 0x04	; 4
+  68:	f2 e0       	ldi	r31, 0x02	; 2
+  6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
+  6c:	05 90       	lpm	r0, Z+
+  6e:	0d 92       	st	X+, r0
+  70:	a0 36       	cpi	r26, 0x60	; 96
+  72:	b1 07       	cpc	r27, r17
+  74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
+
+00000076 <__do_clear_bss>:
+  76:	20 e0       	ldi	r18, 0x00	; 0
+  78:	a0 e6       	ldi	r26, 0x60	; 96
+  7a:	b0 e0       	ldi	r27, 0x00	; 0
+  7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
+
+0000007e <.do_clear_bss_loop>:
+  7e:	1d 92       	st	X+, r1
+
+00000080 <.do_clear_bss_start>:
+  80:	a4 36       	cpi	r26, 0x64	; 100
+  82:	b2 07       	cpc	r27, r18
+  84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
+  86:	0e 94 58 00 	call	0xb0	; 0xb0 <main>
+  8a:	0c 94 00 01 	jmp	0x200	; 0x200 <_exit>
+
+0000008e <__bad_interrupt>:
+  8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000092 <Execute>:
+#include <stdint.h>
+#include <SPI.h>
+
+
+void Execute(uint8_t Command, uint8_t Data)
+{
+  92:	cf 93       	push	r28
+  94:	c6 2f       	mov	r28, r22
+	Reset_Bit(PORTB, SS);
+  96:	98 b3       	in	r25, 0x18	; 24
+  98:	9f 7e       	andi	r25, 0xEF	; 239
+  9a:	98 bb       	out	0x18, r25	; 24
+	SPI_Send(Command);
+  9c:	0e 94 ae 00 	call	0x15c	; 0x15c <SPI_Send>
+	SPI_Send(Data);
+  a0:	8c 2f       	mov	r24, r28
+  a2:	0e 94 ae 00 	call	0x15c	; 0x15c <SPI_Send>
+	Set_Bit(PORTB, SS);
+  a6:	88 b3       	in	r24, 0x18	; 24
+  a8:	80 61       	ori	r24, 0x10	; 16
+  aa:	88 bb       	out	0x18, r24	; 24
+
+}
+  ac:	cf 91       	pop	r28
+  ae:	08 95       	ret
+
+000000b0 <main>:
+
+
+int main()
+{
+	SPI_Master_Init();
+  b0:	0e 94 92 00 	call	0x124	; 0x124 <SPI_Master_Init>
+		
+	unsigned char counter;
+	unsigned char index_display;	
+	Execute(0x09, 0xFF);
+  b4:	6f ef       	ldi	r22, 0xFF	; 255
+  b6:	89 e0       	ldi	r24, 0x09	; 9
+  b8:	0e 94 49 00 	call	0x92	; 0x92 <Execute>
+	Execute(0x0A, 0xFF);
+  bc:	6f ef       	ldi	r22, 0xFF	; 255
+  be:	8a e0       	ldi	r24, 0x0A	; 10
+  c0:	0e 94 49 00 	call	0x92	; 0x92 <Execute>
+	Execute(0x0B, 0xF7);
+  c4:	67 ef       	ldi	r22, 0xF7	; 247
+  c6:	8b e0       	ldi	r24, 0x0B	; 11
+  c8:	0e 94 49 00 	call	0x92	; 0x92 <Execute>
+	Execute(0x0C, 0x01);
+  cc:	61 e0       	ldi	r22, 0x01	; 1
+  ce:	8c e0       	ldi	r24, 0x0C	; 12
+  d0:	0e 94 49 00 	call	0x92	; 0x92 <Execute>
+	
+	while (1)
+	{
+		for (index_display = 1, counter = 1; index_display < 9; index_display++)
+  d4:	c1 e0       	ldi	r28, 0x01	; 1
+  d6:	61 e0       	ldi	r22, 0x01	; 1
+  d8:	10 c0       	rjmp	.+32     	; 0xfa <main+0x4a>
+		{	
+			Execute(index_display, counter++);			
+  da:	d1 e0       	ldi	r29, 0x01	; 1
+  dc:	d6 0f       	add	r29, r22
+  de:	8c 2f       	mov	r24, r28
+  e0:	0e 94 49 00 	call	0x92	; 0x92 <Execute>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  e4:	2f ef       	ldi	r18, 0xFF	; 255
+  e6:	84 e3       	ldi	r24, 0x34	; 52
+  e8:	9c e0       	ldi	r25, 0x0C	; 12
+  ea:	21 50       	subi	r18, 0x01	; 1
+  ec:	80 40       	sbci	r24, 0x00	; 0
+  ee:	90 40       	sbci	r25, 0x00	; 0
+  f0:	e1 f7       	brne	.-8      	; 0xea <main+0x3a>
+  f2:	00 c0       	rjmp	.+0      	; 0xf4 <main+0x44>
+  f4:	00 00       	nop
+	Execute(0x0B, 0xF7);
+	Execute(0x0C, 0x01);
+	
+	while (1)
+	{
+		for (index_display = 1, counter = 1; index_display < 9; index_display++)
+  f6:	cf 5f       	subi	r28, 0xFF	; 255
+		{	
+			Execute(index_display, counter++);			
+  f8:	6d 2f       	mov	r22, r29
+	Execute(0x0B, 0xF7);
+	Execute(0x0C, 0x01);
+	
+	while (1)
+	{
+		for (index_display = 1, counter = 1; index_display < 9; index_display++)
+  fa:	c9 30       	cpi	r28, 0x09	; 9
+  fc:	70 f3       	brcs	.-36     	; 0xda <main+0x2a>
+  fe:	c1 e0       	ldi	r28, 0x01	; 1
+ 100:	0e c0       	rjmp	.+28     	; 0x11e <main+0x6e>
+			_delay_ms(500);
+		}
+		
+		for (index_display = 1, counter = 0; index_display < 9; index_display++)
+		{
+			Execute(index_display, counter);
+ 102:	60 e0       	ldi	r22, 0x00	; 0
+ 104:	8c 2f       	mov	r24, r28
+ 106:	0e 94 49 00 	call	0x92	; 0x92 <Execute>
+ 10a:	2f ef       	ldi	r18, 0xFF	; 255
+ 10c:	84 e3       	ldi	r24, 0x34	; 52
+ 10e:	9c e0       	ldi	r25, 0x0C	; 12
+ 110:	21 50       	subi	r18, 0x01	; 1
+ 112:	80 40       	sbci	r24, 0x00	; 0
+ 114:	90 40       	sbci	r25, 0x00	; 0
+ 116:	e1 f7       	brne	.-8      	; 0x110 <main+0x60>
+ 118:	00 c0       	rjmp	.+0      	; 0x11a <main+0x6a>
+ 11a:	00 00       	nop
+		{	
+			Execute(index_display, counter++);			
+			_delay_ms(500);
+		}
+		
+		for (index_display = 1, counter = 0; index_display < 9; index_display++)
+ 11c:	cf 5f       	subi	r28, 0xFF	; 255
+ 11e:	c9 30       	cpi	r28, 0x09	; 9
+ 120:	80 f3       	brcs	.-32     	; 0x102 <main+0x52>
+ 122:	d8 cf       	rjmp	.-80     	; 0xd4 <main+0x24>
+
+00000124 <SPI_Master_Init>:
+	while(!Read_Bit(SPSR, SPIF));
+	Set_Bit(PORTB, SS);
+
+	//read the new received data
+	return SPDR;
+}
+ 124:	87 b3       	in	r24, 0x17	; 23
+ 126:	80 6b       	ori	r24, 0xB0	; 176
+ 128:	87 bb       	out	0x17, r24	; 23
+ 12a:	8e b1       	in	r24, 0x0e	; 14
+ 12c:	80 62       	ori	r24, 0x20	; 32
+ 12e:	8e b9       	out	0x0e, r24	; 14
+ 130:	8d b1       	in	r24, 0x0d	; 13
+ 132:	87 7f       	andi	r24, 0xF7	; 247
+ 134:	8d b9       	out	0x0d, r24	; 13
+ 136:	8d b1       	in	r24, 0x0d	; 13
+ 138:	8b 7f       	andi	r24, 0xFB	; 251
+ 13a:	8d b9       	out	0x0d, r24	; 13
+ 13c:	8e b1       	in	r24, 0x0e	; 14
+ 13e:	8e 7f       	andi	r24, 0xFE	; 254
+ 140:	8e b9       	out	0x0e, r24	; 14
+ 142:	8d b1       	in	r24, 0x0d	; 13
+ 144:	8c 7f       	andi	r24, 0xFC	; 252
+ 146:	8d b9       	out	0x0d, r24	; 13
+ 148:	8d b1       	in	r24, 0x0d	; 13
+ 14a:	81 60       	ori	r24, 0x01	; 1
+ 14c:	8d b9       	out	0x0d, r24	; 13
+ 14e:	8d b1       	in	r24, 0x0d	; 13
+ 150:	80 61       	ori	r24, 0x10	; 16
+ 152:	8d b9       	out	0x0d, r24	; 13
+ 154:	8d b1       	in	r24, 0x0d	; 13
+ 156:	80 64       	ori	r24, 0x40	; 64
+ 158:	8d b9       	out	0x0d, r24	; 13
+ 15a:	08 95       	ret
+
+0000015c <SPI_Send>:
+//when the SPI send data and no data is received
+//for connecting MAX7221 chip
+void SPI_Send(uint8_t Data)
+{
+	//write data to be send
+	SPDR = Data;
+ 15c:	8f b9       	out	0x0f, r24	; 15
+	
+	//in the master: an exchange data transaction is issued and wait until the transmit is complete from the master (new data received also)
+	//in the slave: wait for the exchange data transaction from the master is issued and the transmit is complete from the slave (new data received also)
+	while(!Read_Bit(SPSR, SPIF));
+ 15e:	77 9b       	sbis	0x0e, 7	; 14
+ 160:	fe cf       	rjmp	.-4      	; 0x15e <SPI_Send+0x2>
+ 162:	08 95       	ret
+
+00000164 <__vector_14>:
+ 164:	1f 92       	push	r1
+ 166:	0f 92       	push	r0
+ 168:	0f b6       	in	r0, 0x3f	; 63
+ 16a:	0f 92       	push	r0
+ 16c:	11 24       	eor	r1, r1
+ 16e:	2f 93       	push	r18
+ 170:	3f 93       	push	r19
+ 172:	4f 93       	push	r20
+ 174:	5f 93       	push	r21
+ 176:	6f 93       	push	r22
+ 178:	7f 93       	push	r23
+ 17a:	8f 93       	push	r24
+ 17c:	9f 93       	push	r25
+ 17e:	af 93       	push	r26
+ 180:	bf 93       	push	r27
+ 182:	ef 93       	push	r30
+ 184:	ff 93       	push	r31
+ 186:	e0 91 62 00 	lds	r30, 0x0062	; 0x800062 <P_UART_UDRE_ISR_CallBack>
+ 18a:	f0 91 63 00 	lds	r31, 0x0063	; 0x800063 <P_UART_UDRE_ISR_CallBack+0x1>
+ 18e:	09 95       	icall
+ 190:	ff 91       	pop	r31
+ 192:	ef 91       	pop	r30
+ 194:	bf 91       	pop	r27
+ 196:	af 91       	pop	r26
+ 198:	9f 91       	pop	r25
+ 19a:	8f 91       	pop	r24
+ 19c:	7f 91       	pop	r23
+ 19e:	6f 91       	pop	r22
+ 1a0:	5f 91       	pop	r21
+ 1a2:	4f 91       	pop	r20
+ 1a4:	3f 91       	pop	r19
+ 1a6:	2f 91       	pop	r18
+ 1a8:	0f 90       	pop	r0
+ 1aa:	0f be       	out	0x3f, r0	; 63
+ 1ac:	0f 90       	pop	r0
+ 1ae:	1f 90       	pop	r1
+ 1b0:	18 95       	reti
+
+000001b2 <__vector_13>:
+ 1b2:	1f 92       	push	r1
+ 1b4:	0f 92       	push	r0
+ 1b6:	0f b6       	in	r0, 0x3f	; 63
+ 1b8:	0f 92       	push	r0
+ 1ba:	11 24       	eor	r1, r1
+ 1bc:	2f 93       	push	r18
+ 1be:	3f 93       	push	r19
+ 1c0:	4f 93       	push	r20
+ 1c2:	5f 93       	push	r21
+ 1c4:	6f 93       	push	r22
+ 1c6:	7f 93       	push	r23
+ 1c8:	8f 93       	push	r24
+ 1ca:	9f 93       	push	r25
+ 1cc:	af 93       	push	r26
+ 1ce:	bf 93       	push	r27
+ 1d0:	ef 93       	push	r30
+ 1d2:	ff 93       	push	r31
+ 1d4:	e0 91 60 00 	lds	r30, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 1d8:	f0 91 61 00 	lds	r31, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 1dc:	09 95       	icall
+ 1de:	ff 91       	pop	r31
+ 1e0:	ef 91       	pop	r30
+ 1e2:	bf 91       	pop	r27
+ 1e4:	af 91       	pop	r26
+ 1e6:	9f 91       	pop	r25
+ 1e8:	8f 91       	pop	r24
+ 1ea:	7f 91       	pop	r23
+ 1ec:	6f 91       	pop	r22
+ 1ee:	5f 91       	pop	r21
+ 1f0:	4f 91       	pop	r20
+ 1f2:	3f 91       	pop	r19
+ 1f4:	2f 91       	pop	r18
+ 1f6:	0f 90       	pop	r0
+ 1f8:	0f be       	out	0x3f, r0	; 63
+ 1fa:	0f 90       	pop	r0
+ 1fc:	1f 90       	pop	r1
+ 1fe:	18 95       	reti
+
+00000200 <_exit>:
+ 200:	f8 94       	cli
+
+00000202 <__stop_program>:
+ 202:	ff cf       	rjmp	.-2      	; 0x202 <__stop_program>
