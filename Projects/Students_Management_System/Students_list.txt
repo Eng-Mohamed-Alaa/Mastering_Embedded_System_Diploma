@@ -1,0 +1,4 @@
+1 Mohamed Alaa 3.5 7 8 9 4 6
+2 Ahmed Ashraf 3.9 4 2 3 8 9
+4 Ramy Medhat 4 12 5 8 9 17
+2 Samy Ibrahim 2.5 4 7 2 3 6
