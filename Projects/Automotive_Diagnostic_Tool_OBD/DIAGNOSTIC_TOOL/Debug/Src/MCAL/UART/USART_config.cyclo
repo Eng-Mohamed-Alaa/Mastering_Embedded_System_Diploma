@@ -1,0 +1,2 @@
+../Src/MCAL/UART/../../../Inc/MCAL/UART/USART_private.h:118:30:Usart_enuSetBaudrate	8
+../Src/MCAL/UART/../../../Inc/MCAL/UART/USART_private.h:184:30:Usart_enuEnableRccClock	6

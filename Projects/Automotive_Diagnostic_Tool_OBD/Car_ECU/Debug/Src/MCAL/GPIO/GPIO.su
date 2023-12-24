@@ -1,0 +1,9 @@
+../Src/MCAL/GPIO/GPIO.c:58:22:GPIO_PIN_INIT	24	static
+../Src/MCAL/GPIO/GPIO.c:107:22:GPIO_set_PIN_value	24	static
+../Src/MCAL/GPIO/GPIO.c:131:6:GPIO_togle_PIN	16	static
+../Src/MCAL/GPIO/GPIO.c:136:6:Atomic_bit_set	16	static
+../Src/MCAL/GPIO/GPIO.c:140:6:Atomic_bit_reset	16	static
+../Src/MCAL/GPIO/GPIO.c:152:22:GPIO_get_PIN_value	24	static
+../Src/MCAL/GPIO/GPIO.c:172:22:GPIO_Port_Enable_clock	24	static
+../Src/MCAL/GPIO/GPIO.c:200:22:GPIO_Port_Reset_clock	24	static
+../Src/MCAL/GPIO/GPIO.c:228:22:GPIO_Port_Disable_clock	24	static

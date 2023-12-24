@@ -1,0 +1,2 @@
+../Src/MCAL/FLASH/FLASH.c:45:23:Flash_enuWriteHalfWordAt_Sync	6
+../Src/MCAL/FLASH/FLASH.c:85:23:Flash_enuErasePageAt_Sync	6

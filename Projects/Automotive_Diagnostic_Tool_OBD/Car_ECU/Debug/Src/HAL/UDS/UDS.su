@@ -1,0 +1,6 @@
+../Src/HAL/UDS/UDS.c:33:6:UDS_VoidInit	24	static
+../Src/HAL/UDS/UDS.c:51:6:UDS_Request	40	static
+../Src/HAL/UDS/UDS.c:74:6:UDS_requestHandler	16	static,ignoring_inline_asm
+../Src/HAL/UDS/UDS.c:177:6:UDS_GenerateNegativeResponse	16	static
+../Src/HAL/UDS/UDS.c:183:6:UDS_GeneratePositiveResponse	16	static
+../Src/HAL/UDS/UDS.c:190:6:UDS_voidSetCallBack	16	static

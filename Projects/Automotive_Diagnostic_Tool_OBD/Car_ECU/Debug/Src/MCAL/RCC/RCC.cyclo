@@ -1,0 +1,16 @@
+../Src/MCAL/RCC/RCC.c:84:21:Rcc_enuSelectSysCLk	16
+../Src/MCAL/RCC/RCC.c:176:21:Rcc_enuControlCLk	7
+../Src/MCAL/RCC/RCC.c:228:21:Rcc_enuCheckCLk	6
+../Src/MCAL/RCC/RCC.c:261:21:Rcc_enuGET_SYS_CLOCK	2
+../Src/MCAL/RCC/RCC.c:290:21:Rcc_enuCfg_AHB_BusPrescalers	17
+../Src/MCAL/RCC/RCC.c:346:21:Rcc_enuCfg_APB1_BusPrescalers	9
+../Src/MCAL/RCC/RCC.c:377:21:Rcc_enuCfg_APB2_BusPrescalers	9
+../Src/MCAL/RCC/RCC.c:408:21:Rcc_enuCfg_ADC_ClockSrc_Prescalers	7
+../Src/MCAL/RCC/RCC.c:460:21:Rcc_enuCfg_PLL_CFG	6
+../Src/MCAL/RCC/RCC.c:513:21:Rcc_enuControl_AHB_Peripheral	5
+../Src/MCAL/RCC/RCC.c:555:21:Rcc_enuControl_APB1_Peripheral	5
+../Src/MCAL/RCC/RCC.c:612:21:Rcc_enuControl_APB2_Peripheral	5
+../Src/MCAL/RCC/RCC.c:664:21:Rcc_enuReset_APB1_Peripheral	3
+../Src/MCAL/RCC/RCC.c:708:21:Rcc_enuReset_APB2_Peripheral	3
+../Src/MCAL/RCC/RCC.c:752:21:Rcc_enuMCO_CLOCK_slector	9
+../Src/MCAL/RCC/RCC.c:782:21:Rcc_enuCfg_USB_ClockSrc_Prescalers	3

@@ -1,0 +1,3 @@
+../Src/HAL/UDS/UDS_SECURITY_SERVICE.c:34:7:Security_LevelHandler	16	static
+../Src/HAL/UDS/UDS_SECURITY_SERVICE.c:64:8:custom_hash_function	32	static
+../Src/HAL/UDS/UDS_SECURITY_SERVICE.c:79:8:generate_random_number	24	static

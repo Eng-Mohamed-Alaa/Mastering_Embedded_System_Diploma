@@ -1,0 +1,4 @@
+../Src/MCAL/TIMER/Timer.c:14:6:Timer_Init	16	static
+../Src/MCAL/TIMER/Timer.c:48:6:Timer_PWM_CFG	24	static
+../Src/MCAL/TIMER/Timer.c:98:6:Timer_PWM_Start	16	static
+../Src/MCAL/TIMER/Timer.c:115:6:Timer_Stop	16	static

@@ -1,0 +1,16 @@
+../Src/MCAL/RCC/RCC.c:84:21:Rcc_enuSelectSysCLk	32	static
+../Src/MCAL/RCC/RCC.c:176:21:Rcc_enuControlCLk	24	static
+../Src/MCAL/RCC/RCC.c:228:21:Rcc_enuCheckCLk	24	static
+../Src/MCAL/RCC/RCC.c:261:21:Rcc_enuGET_SYS_CLOCK	24	static
+../Src/MCAL/RCC/RCC.c:290:21:Rcc_enuCfg_AHB_BusPrescalers	24	static
+../Src/MCAL/RCC/RCC.c:346:21:Rcc_enuCfg_APB1_BusPrescalers	24	static
+../Src/MCAL/RCC/RCC.c:377:21:Rcc_enuCfg_APB2_BusPrescalers	24	static
+../Src/MCAL/RCC/RCC.c:408:21:Rcc_enuCfg_ADC_ClockSrc_Prescalers	24	static
+../Src/MCAL/RCC/RCC.c:460:21:Rcc_enuCfg_PLL_CFG	24	static
+../Src/MCAL/RCC/RCC.c:513:21:Rcc_enuControl_AHB_Peripheral	24	static
+../Src/MCAL/RCC/RCC.c:555:21:Rcc_enuControl_APB1_Peripheral	24	static
+../Src/MCAL/RCC/RCC.c:612:21:Rcc_enuControl_APB2_Peripheral	24	static
+../Src/MCAL/RCC/RCC.c:664:21:Rcc_enuReset_APB1_Peripheral	24	static
+../Src/MCAL/RCC/RCC.c:708:21:Rcc_enuReset_APB2_Peripheral	24	static
+../Src/MCAL/RCC/RCC.c:752:21:Rcc_enuMCO_CLOCK_slector	24	static
+../Src/MCAL/RCC/RCC.c:782:21:Rcc_enuCfg_USB_ClockSrc_Prescalers	24	static

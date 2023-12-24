@@ -1,0 +1,2 @@
+../Src/HAL/Limit_Switch/Limit_Switch.c:14:6:Limit_SW_Init	1
+../Src/HAL/Limit_Switch/Limit_Switch.c:20:18:Limit_SW_Get_State	3

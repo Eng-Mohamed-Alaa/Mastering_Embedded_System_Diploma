@@ -1,0 +1,4 @@
+../Src/screens.c:13:6:SCREEN_securityLevel1POS	6
+../Src/screens.c:75:6:SCREEN_securityLevel1NEG	8
+../Src/screens.c:158:6:SCREEN_Temp	4
+../Src/screens.c:211:6:SCREEN_Mirror	8

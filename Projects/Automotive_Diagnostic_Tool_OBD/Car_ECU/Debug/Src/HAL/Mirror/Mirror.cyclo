@@ -1,0 +1,5 @@
+../Src/HAL/Mirror/Mirror.c:13:6:Mirror_Init	1
+../Src/HAL/Mirror/Mirror.c:19:6:Mirror_Open	1
+../Src/HAL/Mirror/Mirror.c:24:6:Mirror_Close	1
+../Src/HAL/Mirror/Mirror.c:29:6:Mirror_Stop	1
+../Src/HAL/Mirror/Mirror.c:34:16:Mirror_Get_State	3

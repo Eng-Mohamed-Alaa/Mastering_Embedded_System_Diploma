@@ -1,0 +1,3 @@
+../Src/MCAL/ADC/ADC.c:25:6:ADC_vidInit	16	static
+../Src/MCAL/ADC/ADC.c:120:6:ADC_vidDeInit	4	static
+../Src/MCAL/ADC/ADC.c:139:22:ADC_enu_Read_Regular_Channel	24	static

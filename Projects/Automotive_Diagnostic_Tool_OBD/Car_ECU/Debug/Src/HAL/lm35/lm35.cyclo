@@ -1,0 +1,2 @@
+../Src/HAL/lm35/lm35.c:20:6:lm35_VidInit	1
+../Src/HAL/lm35/lm35.c:24:8:lm35_u16Read	1

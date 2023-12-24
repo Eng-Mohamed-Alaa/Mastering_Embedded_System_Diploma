@@ -1,0 +1,10 @@
+{
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  "cmake.configureOnOpen": true,
+  "files.associations": {
+    "../../Inc/MCAL/GPIO/GPIO.h": "c",
+    "tft_interface.h": "c",
+    "magic_numbers.h": "c",
+    "standard_data_types.h": "c"
+  }
+}

@@ -1,0 +1,2 @@
+../Src/HAL/NVRAM/NVRAM.c:37:25:Nvram_EnableFeature	1
+../Src/HAL/NVRAM/NVRAM.c:44:25:Nvram_DisableFeature	1

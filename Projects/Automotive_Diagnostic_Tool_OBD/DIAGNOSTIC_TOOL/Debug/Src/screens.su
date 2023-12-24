@@ -1,0 +1,4 @@
+../Src/screens.c:13:6:SCREEN_securityLevel1POS	32	static
+../Src/screens.c:75:6:SCREEN_securityLevel1NEG	32	static
+../Src/screens.c:158:6:SCREEN_Temp	40	static
+../Src/screens.c:211:6:SCREEN_Mirror	32	static

@@ -1,0 +1,3 @@
+../Src/HAL/Servo_Motor/Servo_Motor.c:14:6:Servo_Init	24	static
+../Src/HAL/Servo_Motor/Servo_Motor.c:24:6:Servo_Rotate	24	static
+../Src/HAL/Servo_Motor/Servo_Motor.c:31:6:Servo_Stop	8	static
